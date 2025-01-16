@@ -80,15 +80,15 @@
     <script> 
         console.log("------混服（越狱）-----------");
     	var u = navigator.userAgent;
-    	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-    	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android
+    	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios
     	var link1 = 'https://gt-mr-sharing.s3.ap-southeast-1.amazonaws.com/CM/CrazyMonster202432.apk'
 
     	if(isiOS) {
     	    link1 = "itms-services://?action=download-manifest&url=https://d3ggu5tgyq6kcb.cloudfront.net/PKM/20241009/mianfest.plist"
     	}
         var mySwiper = new Swiper('.swiper-container', {  
-            autoplay:true,//等同于以下设置  
+            autoplay:true,
             autoplay: {  
                 delay: 1000,  
                 stopOnLastSlide: false,  
