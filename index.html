@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Monster</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="swiper.css">  
+    <script src="swiper.js"></script> 
+</head>
+<body>
+    <div class="box">
+        <div class="title">
+            <div>
+                <img src="ash.png" alt="">
+            </div>
+            <div class="title_text">
+                <h3>Crazy Monster - Pokemon game</h3>
+                <p class="title_text_center">Compete with your friends in Pokemon world</p>
+                <div class="title_text_foot">
+                    <!-- <div><img src="./resource/images/1.png" alt=""></div>
+                    <div class="title_text_foot_content">
+                        <span>安装教程</span>
+                        <img src="./resource/images/2.png" alt="">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <hr class="first_hr"/>
+
+        <div>
+            <h3 class="carousel_title">View</h3>
+            <div>
+                <div class="swiper-container">  
+                    <div class="swiper-wrapper">  
+                        <div class="swiper-slide"><img src="000.jpg" alt=""></div>  
+                        <div class="swiper-slide"><img src="001.jpg" alt=""></div>  
+                        <div class="swiper-slide"><img src="002.jpg" alt=""></div>  
+                        <div class="swiper-slide"><img src="003.jpg" alt=""></div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+        <hr/>
+
+        <div class="install_box">
+            <button class="install_box_btn">Install</button>
+            <p class="install_box_content"></p>
+                <span class="install_box_text"></span>
+            </p>
+        </div>
+
+        <hr/>
+        <div>
+            <p>Please remove any previous installations before playing. If you run into any problems, let us know right away.</p>
+            <p>
+                <span>Contact us</span>
+                <span style="color:red"><a href="https://discord.gg/JCvnNX5">Official Discord server</a></span>
+            </p>
+        </div>
+
+        <hr/>
+
+
+
+        <div>
+            <h3>Game Introduction</h3>
+            <div class="introduce_title">
+                <!-- <p>版本1.0.6</p>
+                <p>3天前</p> -->
+            </div>
+            <p style="text-indent: 32px;">Crazy Monster is a Pokémon-themed pokemon raising RPG mobile game that perfectly recreates classic scenes. All Pokémon are faithfully restored, waiting for you to collect, cultivate, and build your strongest team! The game faithfully reproduces Pokémon evolution, Pokédex collection, challenge sparring, and League Champion competition, and adds new features such as Pokémon equipment and breakthrough, allowing you to relive the classic handheld experience while enjoying more gameplay fun! Pokémon from multiple generations gather in the Pokémon world, with rare legendary Pokémon appearing. Everyone can freely explore and capture! Exciting PVP battle mode ignites the hot arena, achieving the title of the strongest trainer master! Transcending time and space, embark on a Pokémon adventure journey, with continuous surprises and easter eggs, taking you back to the nostalgic Pokémon childhood, and returning you to a pocket dream!</p>
+        </div>
+    </div>
+
+    <script> 
+        console.log("------混服（越狱）-----------");
+    	var u = navigator.userAgent;
+    	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    	var link1 = 'https://gt-mr-sharing.s3.ap-southeast-1.amazonaws.com/CM/CrazyMonster202432.apk'
+
+    	if(isiOS) {
+    	    link1 = "itms-services://?action=download-manifest&url=https://d3ggu5tgyq6kcb.cloudfront.net/PKM/20241009/mianfest.plist"
+    	}
+        var mySwiper = new Swiper('.swiper-container', {  
+            autoplay:true,//等同于以下设置  
+            autoplay: {  
+                delay: 1000,  
+                stopOnLastSlide: false,  
+                disableOnInteraction: false,  
+            },  
+        });
+
+        let btn = document.querySelector('.install_box_content').onclick = function() {
+            window.location.href = "/tips.html";
+        }
+        let install = document.querySelector('.install_box_btn').onclick = function() {
+            window.location.href = link1;
+        }
+    </script>
+</body>
+</html>
